@@ -1,73 +1,42 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using TRTPO_CALC.Operations;
+using TRTPO_CALC.Module;
 
 namespace TRTPO_CALC
 {
 	public partial class MainForm : Form
 	{
 		private readonly ButtonHandler buttonHandler;
-		private string input = string.Empty;
-		private string operand = string.Empty;
-		private Operation operation = null;
-		private bool operandChange;
 
+		internal event EventHandler onOperation;
+		internal event EventHandler onOperandChanged;
+		internal event EventHandler onButtonClick;
+		public Type CurrentModule;
+
+		private Calculator calculator;
 		public MainForm()
 		{
 			InitializeComponent();
-			buttonHandler = new ButtonHandler(OnOperationChanged, OnOperandChanged);
-			Button_Plus.Tag = OperationHandler.Operations.summation;
-			Button_Minus.Tag = OperationHandler.Operations.subtraction;
-			Button_Mult.Tag = OperationHandler.Operations.multiplication;
-			Button_Divide.Tag = OperationHandler.Operations.division;
-			Button_Power.Tag = OperationHandler.Operations.power;
-			Button_Equals.Tag = OperationHandler.Operations.equals;
+			buttonHandler = new ButtonHandler(onOperation, onOperandChanged);
+			calculator = new Calculator(onOperation, onOperandChanged, onButtonClick);
+			CurrentModule = typeof(Calculator);
 		}
 
-		private void PerformOperation()
+		public void Print(object data)
 		{
-			if (operation == null)
-				return;
-			input = Math.Round(OperationHandler.PerformOperation(operation, double.Parse(input), double.Parse(operand)), 10).ToString();
-			operation = null;
-			operand = string.Empty;
-		}
-
-		private void OnOperationChanged(object sender, EventArgs e)
-		{
-			Button button = (Button) sender;
-			Operation operation = (Operation) button.Tag;
-			if(input.Length != 0)
+			switch (CurrentModule.Name.ToLower())
 			{
-				if (operand.Length != 0)
-				{
-					PerformOperation();
-				} 
-				
+				case "calculator":
+					OutputBox.Clear();
+					OutputBox.AppendText((string) data);
+					break;
 			}
-			else
-			{
-				input = operand;
-				operand = string.Empty;
-			}
-
-			if (!(operation is Equals))
-				this.operation = operation;
-		}
-		private void OnOperandChanged(object digit, EventArgs e)
-		{
-			if (operation == null)
-				input = string.Empty;
-			operand += digit;
 		}
 		private void OnButtonClick(object sender, EventArgs e)
 		{
 			if(sender is Button button)
 				buttonHandler.HandleClick(button, e);
-			OutputBox.Clear();
-			OutputBox.AppendText($"{input} {operation?.symbol} {operand}".Trim());
 		}
 	}
 }

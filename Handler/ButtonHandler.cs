@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
-using TRTPO_CALC.Operations;
 
 namespace TRTPO_CALC
 {
