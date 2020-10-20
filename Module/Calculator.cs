@@ -2,20 +2,22 @@
 using System.Windows.Forms;
 using TRTPO_CALC.Operations;
 
-namespace TRTPO_CALC.Module
+namespace TRTPO_CALC
 {
-	public class Calculator
+	public partial class Calculator : UserControl
 	{
+		private readonly ButtonHandler buttonHandler;
+
 		private string input = string.Empty;
 		private string operand = string.Empty;
 		private Operation operation;
 
-		public Calculator(EventHandler onOperation, EventHandler onOperandChanged, EventHandler onButtonClick)
+		public Calculator()
 		{
-			onOperation += this.OnOperation;
-			onOperandChanged += this.OnOperandChanged;
-			onButtonClick += this.OnButtonClick;
+			InitializeComponent();
+			buttonHandler = new ButtonHandler(OnOperation, OnOperandChanged);
 		}
+
 		private void PerformOperation()
 		{
 			if (operation == null)
@@ -25,6 +27,7 @@ namespace TRTPO_CALC.Module
 			operation = null;
 			operand = string.Empty;
 		}
+
 		private void OnOperation(object sender, EventArgs e)
 		{
 			Operation operation = (Operation) ((Button) sender).Tag;
@@ -44,6 +47,7 @@ namespace TRTPO_CALC.Module
 			if (!(operation is Equals))
 				this.operation = operation;
 		}
+
 		private void OnOperandChanged(object digit, EventArgs e)
 		{
 			if (operation == null)
@@ -53,7 +57,10 @@ namespace TRTPO_CALC.Module
 
 		private void OnButtonClick(object sender, EventArgs e)
 		{
-
+			if (sender is Button button)
+				buttonHandler.HandleClick(button, e);
+			OutputBox.Clear();
+			OutputBox.AppendText($"{input} {operation?.symbol} {operand}");
 		}
 	}
 }

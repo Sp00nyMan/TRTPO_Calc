@@ -30,13 +30,24 @@ namespace TRTPO_CALC
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.calculator1 = new TRTPO_CALC.Calculator();
 			this.SuspendLayout();
+			// 
+			// calculator1
+			// 
+			this.calculator1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.calculator1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.calculator1.Location = new System.Drawing.Point(3, 3);
+			this.calculator1.Name = "calculator1";
+			this.calculator1.Size = new System.Drawing.Size(374, 474);
+			this.calculator1.TabIndex = 0;
 			// 
 			// MainForm
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.ClientSize = new System.Drawing.Size(380, 480);
+			this.Controls.Add(this.calculator1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
@@ -47,6 +58,8 @@ namespace TRTPO_CALC
 		}
 
 		#endregion
+
+		private Calculator calculator1;
 	}
 }
 

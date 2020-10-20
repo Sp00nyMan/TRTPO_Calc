@@ -285,6 +285,7 @@
 			this.Button_Convert.TabIndex = 0;
 			this.Button_Convert.Text = "Convert";
 			this.Button_Convert.UseVisualStyleBackColor = true;
+			this.Button_Convert.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_Power
 			// 
@@ -296,6 +297,7 @@
 			this.Button_Power.Tag = power1;
 			this.Button_Power.Text = "Power";
 			this.Button_Power.UseVisualStyleBackColor = true;
+			this.Button_Power.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container1_2_2
 			// 
@@ -326,6 +328,7 @@
 			this.Button_Clear.Tag = "Operation";
 			this.Button_Clear.Text = "C";
 			this.Button_Clear.UseVisualStyleBackColor = true;
+			this.Button_Clear.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_Backspace
 			// 
@@ -336,6 +339,7 @@
 			this.Button_Backspace.TabIndex = 0;
 			this.Button_Backspace.Text = "<-";
 			this.Button_Backspace.UseVisualStyleBackColor = true;
+			this.Button_Backspace.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container1_3
 			// 
@@ -386,6 +390,7 @@
 			this.Button_7.Tag = "digit";
 			this.Button_7.Text = "7";
 			this.Button_7.UseVisualStyleBackColor = true;
+			this.Button_7.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_8
 			// 
@@ -397,6 +402,7 @@
 			this.Button_8.Tag = "digit";
 			this.Button_8.Text = "8";
 			this.Button_8.UseVisualStyleBackColor = true;
+			this.Button_8.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container1_3_2
 			// 
@@ -427,6 +433,7 @@
 			this.Button_9.Tag = "digit";
 			this.Button_9.Text = "9";
 			this.Button_9.UseVisualStyleBackColor = true;
+			this.Button_9.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_Divide
 			// 
@@ -438,6 +445,7 @@
 			this.Button_Divide.Tag = division1;
 			this.Button_Divide.Text = "/";
 			this.Button_Divide.UseVisualStyleBackColor = true;
+			this.Button_Divide.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2
 			// 
@@ -531,6 +539,7 @@
 			this.Button_4.Tag = "digit";
 			this.Button_4.Text = "4";
 			this.Button_4.UseVisualStyleBackColor = true;
+			this.Button_4.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_5
 			// 
@@ -542,6 +551,7 @@
 			this.Button_5.Tag = "digit";
 			this.Button_5.Text = "5";
 			this.Button_5.UseVisualStyleBackColor = true;
+			this.Button_5.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_1_1_2
 			// 
@@ -572,6 +582,7 @@
 			this.Button_6.Tag = "digit";
 			this.Button_6.Text = "6";
 			this.Button_6.UseVisualStyleBackColor = true;
+			this.Button_6.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_Mult
 			// 
@@ -583,6 +594,7 @@
 			this.Button_Mult.Tag = multiplication1;
 			this.Button_Mult.Text = "X";
 			this.Button_Mult.UseVisualStyleBackColor = true;
+			this.Button_Mult.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_2
 			// 
@@ -633,6 +645,7 @@
 			this.Button_1.Tag = "digit";
 			this.Button_1.Text = "1";
 			this.Button_1.UseVisualStyleBackColor = true;
+			this.Button_1.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_2
 			// 
@@ -644,6 +657,7 @@
 			this.Button_2.Tag = "digit";
 			this.Button_2.Text = "2";
 			this.Button_2.UseVisualStyleBackColor = true;
+			this.Button_2.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_2_2
 			// 
@@ -674,6 +688,7 @@
 			this.Button_3.Tag = "digit";
 			this.Button_3.Text = "3";
 			this.Button_3.UseVisualStyleBackColor = true;
+			this.Button_3.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_Minus
 			// 
@@ -685,6 +700,7 @@
 			this.Button_Minus.Tag = subtraction1;
 			this.Button_Minus.Text = "-";
 			this.Button_Minus.UseVisualStyleBackColor = true;
+			this.Button_Minus.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_3
 			// 
@@ -735,6 +751,7 @@
 			this.Button_Comma.Tag = "digit";
 			this.Button_Comma.Text = ",";
 			this.Button_Comma.UseVisualStyleBackColor = true;
+			this.Button_Comma.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_0
 			// 
@@ -746,6 +763,7 @@
 			this.Button_0.Tag = "digit";
 			this.Button_0.Text = "0";
 			this.Button_0.UseVisualStyleBackColor = true;
+			this.Button_0.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_3_2
 			// 
@@ -776,6 +794,7 @@
 			this.Button_Equals.Tag = equals1;
 			this.Button_Equals.Text = "=";
 			this.Button_Equals.UseVisualStyleBackColor = true;
+			this.Button_Equals.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_Plus
 			// 
@@ -788,6 +807,7 @@
 			this.Button_Plus.Tag = summation1;
 			this.Button_Plus.Text = "+";
 			this.Button_Plus.UseVisualStyleBackColor = true;
+			this.Button_Plus.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Calculator
 			// 

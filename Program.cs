@@ -8,14 +8,12 @@ namespace TRTPO_CALC
 		/// <summary>
 		/// Главная точка входа для приложения.
 		/// </summary>
-		public static MainForm MainForm;
 		[STAThread]
 		static void Main()
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			MainForm = new MainForm();
-			Application.Run(MainForm);
+			Application.Run(new MainForm());
 		}
 	}
 }
