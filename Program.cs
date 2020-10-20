@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TRTPO_CALC
@@ -11,12 +8,14 @@ namespace TRTPO_CALC
 		/// <summary>
 		/// Главная точка входа для приложения.
 		/// </summary>
+		public static MainForm MainForm;
 		[STAThread]
 		static void Main()
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm());
+			MainForm = new MainForm();
+			Application.Run(MainForm);
 		}
 	}
 }
