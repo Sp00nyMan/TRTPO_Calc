@@ -2,7 +2,6 @@
 bin/
 obj/
 Properties/
-TRTPO_CALC/
 App.config
 TRTPO_CALC.csproj
 TRTPO_CALC.sln
