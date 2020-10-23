@@ -1,33 +1,34 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace TRTPO_CALC
+namespace TRTPO_CALC.Handler
 {
-	public class ButtonHandler
+	public class ButtonHandler : Handler
 	{
-		private event EventHandler onOperation;
-		private event EventHandler onDigit;
+		public override event CalculatorEventHandler OnOperation;
+		public override event CalculatorEventHandler OnDigit;
+		public override event CalculatorEventHandler OnControl;
 
-		public ButtonHandler(EventHandler onOperation, EventHandler onDigit)
+		public override void Handle(object sender, object args)
 		{
-			this.onOperation += onOperation;
-			this.onDigit += onDigit;
-		}
-		public void HandleClick(Button sender, EventArgs args)
-		{
-			if(sender.Tag is Operation)
-			{
-				onOperation?.Invoke(sender, null);
-			}
-			else if (sender.Tag is string)
-			{
-				switch ((string) sender.Tag)
+			Button button = (Button) args;
+			if(button.Tag is Operation)
+				OnOperation?.Invoke(this, button.Tag);
+			else
+				switch(button.Tag.GetType().Name.ToLower())
 				{
-					case "digit":
-						onDigit?.Invoke(sender.Text, null);
+					case "string":
+						switch ((string) button.Tag)
+						{
+							case "digit":
+								OnDigit?.Invoke(this, button.Text);
+								break;
+							case "control":
+								OnControl?.Invoke(this, button.AccessibleName);
+								break;
+						}
 						break;
 				}
-			}
 		}
 	}
 }

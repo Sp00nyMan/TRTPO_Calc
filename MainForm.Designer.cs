@@ -1,4 +1,5 @@
-﻿using TRTPO_CALC.Operations;
+﻿using TRTPO_CALC.Module;
+using TRTPO_CALC.Operations;
 
 namespace TRTPO_CALC
 {
@@ -30,7 +31,7 @@ namespace TRTPO_CALC
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.calculator1 = new TRTPO_CALC.Calculator();
+			this.calculator1 = new TRTPO_CALC.Module.Calculator();
 			this.SuspendLayout();
 			// 
 			// calculator1
@@ -49,6 +50,7 @@ namespace TRTPO_CALC
 			this.ClientSize = new System.Drawing.Size(380, 480);
 			this.Controls.Add(this.calculator1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.KeyPreview = true;
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
 			this.Padding = new System.Windows.Forms.Padding(3);

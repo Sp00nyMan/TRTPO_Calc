@@ -1,4 +1,6 @@
-﻿namespace TRTPO_CALC
+﻿using System.Windows.Forms;
+
+namespace TRTPO_CALC.Module
 {
 	partial class Calculator
 	{
@@ -41,7 +43,6 @@
 			this.Container1_2 = new System.Windows.Forms.SplitContainer();
 			this.Container1_2_1 = new System.Windows.Forms.SplitContainer();
 			this.Button_Convert = new System.Windows.Forms.Button();
-			this.Button_Power = new System.Windows.Forms.Button();
 			this.Container1_2_2 = new System.Windows.Forms.SplitContainer();
 			this.Button_Clear = new System.Windows.Forms.Button();
 			this.Button_Backspace = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
 			this.Button_8 = new System.Windows.Forms.Button();
 			this.Container1_3_2 = new System.Windows.Forms.SplitContainer();
 			this.Button_9 = new System.Windows.Forms.Button();
-			this.Button_Divide = new System.Windows.Forms.Button();
 			this.Container2 = new System.Windows.Forms.SplitContainer();
 			this.Container2_1 = new System.Windows.Forms.SplitContainer();
 			this.Container2_1_1 = new System.Windows.Forms.SplitContainer();
@@ -60,19 +60,21 @@
 			this.Button_5 = new System.Windows.Forms.Button();
 			this.Container2_1_1_2 = new System.Windows.Forms.SplitContainer();
 			this.Button_6 = new System.Windows.Forms.Button();
-			this.Button_Mult = new System.Windows.Forms.Button();
 			this.Container2_2 = new System.Windows.Forms.SplitContainer();
 			this.Container2_2_1 = new System.Windows.Forms.SplitContainer();
 			this.Button_1 = new System.Windows.Forms.Button();
 			this.Button_2 = new System.Windows.Forms.Button();
 			this.Container2_2_2 = new System.Windows.Forms.SplitContainer();
 			this.Button_3 = new System.Windows.Forms.Button();
-			this.Button_Minus = new System.Windows.Forms.Button();
 			this.Container2_3 = new System.Windows.Forms.SplitContainer();
 			this.Container2_3_1 = new System.Windows.Forms.SplitContainer();
 			this.Button_Comma = new System.Windows.Forms.Button();
 			this.Button_0 = new System.Windows.Forms.Button();
 			this.Container2_3_2 = new System.Windows.Forms.SplitContainer();
+			this.Button_Power = new System.Windows.Forms.Button();
+			this.Button_Divide = new System.Windows.Forms.Button();
+			this.Button_Mult = new System.Windows.Forms.Button();
+			this.Button_Minus = new System.Windows.Forms.Button();
 			this.Button_Equals = new System.Windows.Forms.Button();
 			this.Button_Plus = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
@@ -283,21 +285,10 @@
 			this.Button_Convert.Name = "Button_Convert";
 			this.Button_Convert.Size = new System.Drawing.Size(96, 86);
 			this.Button_Convert.TabIndex = 0;
+			this.Button_Convert.Tag = "";
 			this.Button_Convert.Text = "Convert";
 			this.Button_Convert.UseVisualStyleBackColor = true;
 			this.Button_Convert.Click += new System.EventHandler(this.OnButtonClick);
-			// 
-			// Button_Power
-			// 
-			this.Button_Power.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.Button_Power.Location = new System.Drawing.Point(0, 0);
-			this.Button_Power.Name = "Button_Power";
-			this.Button_Power.Size = new System.Drawing.Size(98, 86);
-			this.Button_Power.TabIndex = 0;
-			this.Button_Power.Tag = power1;
-			this.Button_Power.Text = "Power";
-			this.Button_Power.UseVisualStyleBackColor = true;
-			this.Button_Power.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container1_2_2
 			// 
@@ -320,23 +311,26 @@
 			// 
 			// Button_Clear
 			// 
+			this.Button_Clear.AccessibleName = "clear";
 			this.Button_Clear.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.Button_Clear.Location = new System.Drawing.Point(0, 0);
 			this.Button_Clear.Name = "Button_Clear";
 			this.Button_Clear.Size = new System.Drawing.Size(98, 86);
 			this.Button_Clear.TabIndex = 0;
-			this.Button_Clear.Tag = "Operation";
+			this.Button_Clear.Tag = "control";
 			this.Button_Clear.Text = "C";
 			this.Button_Clear.UseVisualStyleBackColor = true;
 			this.Button_Clear.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_Backspace
 			// 
+			this.Button_Backspace.AccessibleName = "backspace";
 			this.Button_Backspace.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.Button_Backspace.Location = new System.Drawing.Point(0, 0);
 			this.Button_Backspace.Name = "Button_Backspace";
 			this.Button_Backspace.Size = new System.Drawing.Size(98, 86);
 			this.Button_Backspace.TabIndex = 0;
+			this.Button_Backspace.Tag = "control";
 			this.Button_Backspace.Text = "<-";
 			this.Button_Backspace.UseVisualStyleBackColor = true;
 			this.Button_Backspace.Click += new System.EventHandler(this.OnButtonClick);
@@ -434,18 +428,6 @@
 			this.Button_9.Text = "9";
 			this.Button_9.UseVisualStyleBackColor = true;
 			this.Button_9.Click += new System.EventHandler(this.OnButtonClick);
-			// 
-			// Button_Divide
-			// 
-			this.Button_Divide.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.Button_Divide.Location = new System.Drawing.Point(0, 0);
-			this.Button_Divide.Name = "Button_Divide";
-			this.Button_Divide.Size = new System.Drawing.Size(98, 86);
-			this.Button_Divide.TabIndex = 0;
-			this.Button_Divide.Tag = division1;
-			this.Button_Divide.Text = "/";
-			this.Button_Divide.UseVisualStyleBackColor = true;
-			this.Button_Divide.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2
 			// 
@@ -584,18 +566,6 @@
 			this.Button_6.UseVisualStyleBackColor = true;
 			this.Button_6.Click += new System.EventHandler(this.OnButtonClick);
 			// 
-			// Button_Mult
-			// 
-			this.Button_Mult.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.Button_Mult.Location = new System.Drawing.Point(0, 0);
-			this.Button_Mult.Name = "Button_Mult";
-			this.Button_Mult.Size = new System.Drawing.Size(98, 86);
-			this.Button_Mult.TabIndex = 0;
-			this.Button_Mult.Tag = multiplication1;
-			this.Button_Mult.Text = "X";
-			this.Button_Mult.UseVisualStyleBackColor = true;
-			this.Button_Mult.Click += new System.EventHandler(this.OnButtonClick);
-			// 
 			// Container2_2
 			// 
 			this.Container2_2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -690,18 +660,6 @@
 			this.Button_3.UseVisualStyleBackColor = true;
 			this.Button_3.Click += new System.EventHandler(this.OnButtonClick);
 			// 
-			// Button_Minus
-			// 
-			this.Button_Minus.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.Button_Minus.Location = new System.Drawing.Point(0, 0);
-			this.Button_Minus.Name = "Button_Minus";
-			this.Button_Minus.Size = new System.Drawing.Size(98, 87);
-			this.Button_Minus.TabIndex = 0;
-			this.Button_Minus.Tag = subtraction1;
-			this.Button_Minus.Text = "-";
-			this.Button_Minus.UseVisualStyleBackColor = true;
-			this.Button_Minus.Click += new System.EventHandler(this.OnButtonClick);
-			// 
 			// Container2_3
 			// 
 			this.Container2_3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -784,6 +742,54 @@
 			this.Container2_3_2.TabIndex = 0;
 			this.Container2_3_2.TabStop = false;
 			// 
+			// Button_Power
+			// 
+			this.Button_Power.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Button_Power.Location = new System.Drawing.Point(0, 0);
+			this.Button_Power.Name = "Button_Power";
+			this.Button_Power.Size = new System.Drawing.Size(98, 86);
+			this.Button_Power.TabIndex = 0;
+			this.Button_Power.Tag = power1;
+			this.Button_Power.Text = "Power";
+			this.Button_Power.UseVisualStyleBackColor = true;
+			this.Button_Power.Click += new System.EventHandler(this.OnButtonClick);
+			// 
+			// Button_Divide
+			// 
+			this.Button_Divide.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Button_Divide.Location = new System.Drawing.Point(0, 0);
+			this.Button_Divide.Name = "Button_Divide";
+			this.Button_Divide.Size = new System.Drawing.Size(98, 86);
+			this.Button_Divide.TabIndex = 0;
+			this.Button_Divide.Tag = division1;
+			this.Button_Divide.Text = "/";
+			this.Button_Divide.UseVisualStyleBackColor = true;
+			this.Button_Divide.Click += new System.EventHandler(this.OnButtonClick);
+			// 
+			// Button_Mult
+			// 
+			this.Button_Mult.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Button_Mult.Location = new System.Drawing.Point(0, 0);
+			this.Button_Mult.Name = "Button_Mult";
+			this.Button_Mult.Size = new System.Drawing.Size(98, 86);
+			this.Button_Mult.TabIndex = 0;
+			this.Button_Mult.Tag = multiplication1;
+			this.Button_Mult.Text = "X";
+			this.Button_Mult.UseVisualStyleBackColor = true;
+			this.Button_Mult.Click += new System.EventHandler(this.OnButtonClick);
+			// 
+			// Button_Minus
+			// 
+			this.Button_Minus.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Button_Minus.Location = new System.Drawing.Point(0, 0);
+			this.Button_Minus.Name = "Button_Minus";
+			this.Button_Minus.Size = new System.Drawing.Size(98, 87);
+			this.Button_Minus.TabIndex = 0;
+			this.Button_Minus.Tag = subtraction1;
+			this.Button_Minus.Text = "-";
+			this.Button_Minus.UseVisualStyleBackColor = true;
+			this.Button_Minus.Click += new System.EventHandler(this.OnButtonClick);
+			// 
 			// Button_Equals
 			// 
 			this.Button_Equals.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -816,6 +822,7 @@
 			this.Controls.Add(this.MainContainer);
 			this.Name = "Calculator";
 			this.Size = new System.Drawing.Size(402, 536);
+			this.Load += new System.EventHandler(this.Calculator_Load);
 			this.MainContainer.Panel1.ResumeLayout(false);
 			this.MainContainer.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.MainContainer)).EndInit();
