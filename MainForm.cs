@@ -1,28 +1,38 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
-using TRTPO_CALC.Module;
+using System.Linq;
 
 namespace TRTPO_CALC
 {
 	public partial class MainForm : Form
 	{
-		public Type CurrentModule;
+		public delegate void ModuleEvent(object sender);
 
+		LinkedList<UserControl> modules = new LinkedList<UserControl>();
+		UserControl currentModule;
 		public MainForm()
 		{
 			InitializeComponent();
-			CurrentModule = typeof(Calculator);
+
+			calculator.OnModuleChanged += ChangeModule;
+			converter.OnModuleChanged += ChangeModule;
+			
+			modules.AddLast(calculator);
+			modules.AddLast(converter);
+			currentModule = calculator;
 		}
 
-		private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
+		private void ChangeModule(object sender)
 		{
-			MessageBox.Show(e.KeyChar.ToString());
+			currentModule.Visible = false;
+			currentModule = modules.Find(currentModule)?.Next?.Value ?? modules.First.Value;
+			currentModule.Visible = true;
 		}
 
-		private void MainForm_KeyDown(object sender, KeyEventArgs e)
+		private void MainForm_Load(object sender, EventArgs e)
 		{
-			MessageBox.Show(e.KeyCode.ToString());
-
+			currentModule.Visible = true;
 		}
 	}
 }

@@ -28,7 +28,7 @@ namespace TRTPO_CALC.Module
 		/// Требуемый метод для поддержки конструктора — не изменяйте 
 		/// содержимое этого метода с помощью редактора кода.
 		/// </summary>
-		private void InitializeComponent()
+		public void InitializeComponent()
 		{
 			TRTPO_CALC.Operations.Power power1 = new TRTPO_CALC.Operations.Power();
 			TRTPO_CALC.Operations.Division division1 = new TRTPO_CALC.Operations.Division();
@@ -288,7 +288,7 @@ namespace TRTPO_CALC.Module
 			this.Button_Convert.Tag = "";
 			this.Button_Convert.Text = "Convert";
 			this.Button_Convert.UseVisualStyleBackColor = true;
-			this.Button_Convert.Click += new System.EventHandler(this.OnButtonClick);
+			this.Button_Convert.Click += new System.EventHandler(this.OnConvertClicked);
 			// 
 			// Container1_2_2
 			// 

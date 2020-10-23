@@ -10,6 +10,8 @@ namespace TRTPO_CALC.Module
 		private readonly ButtonHandler buttonHandler;
 		private readonly KeyHandler keyHandler;
 
+		public event MainForm.ModuleEvent OnModuleChanged;
+
 		private string input = string.Empty;
 		private string operand = string.Empty;
 		private Operation operation;
@@ -40,15 +42,15 @@ namespace TRTPO_CALC.Module
 		private void OnOperation(object sender, object oper)
 		{
 			Operation operation = (Operation) oper;
-			if (operand.Length == 0 && operation is Subtraction)
+			if (operand.Length == 0 && operation is Subtraction && this.operation != null)
 			{
 				operand = "-";
 				return;
 			}
 
-			if (input.Length != 0)
+			if (input.Length > 0)
 			{
-				if (operand.Length != 0)
+				if (operand.Length > 0 && operand != "-")
 				{
 					PerformOperation();
 				}
@@ -56,11 +58,12 @@ namespace TRTPO_CALC.Module
 			else
 			{
 				input = operand;
-				operand = string.Empty;
+					operand = string.Empty;
 			}
 
 			if (!(operation is Equals))
 				this.operation = operation;
+
 		}
 
 		private void OnOperandChanged(object sender, object digit)
@@ -120,6 +123,11 @@ namespace TRTPO_CALC.Module
 		private void Calculator_Load(object sender, EventArgs e)
 		{
 			Parent.KeyPress += OnKeyPressed;
+		}
+
+		private void OnConvertClicked(object sender, EventArgs e)
+		{
+			OnModuleChanged?.Invoke(this);
 		}
 	}
 }
