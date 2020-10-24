@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
 using TRTPO_CALC.Operations;
 
@@ -25,6 +24,9 @@ namespace TRTPO_CALC.Handler
 				{
 					case (char) Keys.Back:
 						OnControl?.Invoke(this, "backspace");
+						break;
+					case (char) Keys.Escape :
+						OnControl?.Invoke(this, "clear");
 						break;
 					case '+':
 						OnOperation?.Invoke(this, new Summation());

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace TRTPO_CALC
 {
@@ -20,7 +19,7 @@ namespace TRTPO_CALC
 			
 			modules.AddLast(calculator);
 			modules.AddLast(converter);
-			currentModule = calculator;
+			currentModule = converter;
 		}
 
 		private void ChangeModule(object sender)

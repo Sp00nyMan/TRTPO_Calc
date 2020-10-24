@@ -5,3 +5,5 @@ Properties/
 App.config
 TRTPO_CALC.csproj
 TRTPO_CALC.sln
+packages/
+packages.config

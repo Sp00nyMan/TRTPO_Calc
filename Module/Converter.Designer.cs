@@ -29,6 +29,14 @@
 		private void InitializeComponent()
 		{
 			this.MainContainer = new System.Windows.Forms.SplitContainer();
+			this.Container1 = new System.Windows.Forms.SplitContainer();
+			this.Container1_0 = new System.Windows.Forms.SplitContainer();
+			this.Container1_1 = new System.Windows.Forms.SplitContainer();
+			this.CurrencyTextBox1 = new System.Windows.Forms.TextBox();
+			this.CurrencyComboBox1 = new System.Windows.Forms.ComboBox();
+			this.Container1_2 = new System.Windows.Forms.SplitContainer();
+			this.CurrencyTextBox2 = new System.Windows.Forms.TextBox();
+			this.CurrencyComboBox2 = new System.Windows.Forms.ComboBox();
 			this.Container2 = new System.Windows.Forms.SplitContainer();
 			this.Container2_0_1 = new System.Windows.Forms.SplitContainer();
 			this.Container2_1 = new System.Windows.Forms.SplitContainer();
@@ -58,8 +66,24 @@
 			this.Button_0 = new System.Windows.Forms.Button();
 			this.Button_Comma = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.MainContainer)).BeginInit();
+			this.MainContainer.Panel1.SuspendLayout();
 			this.MainContainer.Panel2.SuspendLayout();
 			this.MainContainer.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.Container1)).BeginInit();
+			this.Container1.Panel1.SuspendLayout();
+			this.Container1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.Container1_0)).BeginInit();
+			this.Container1_0.Panel1.SuspendLayout();
+			this.Container1_0.Panel2.SuspendLayout();
+			this.Container1_0.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.Container1_1)).BeginInit();
+			this.Container1_1.Panel1.SuspendLayout();
+			this.Container1_1.Panel2.SuspendLayout();
+			this.Container1_1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.Container1_2)).BeginInit();
+			this.Container1_2.Panel1.SuspendLayout();
+			this.Container1_2.Panel2.SuspendLayout();
+			this.Container1_2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Container2)).BeginInit();
 			this.Container2.Panel1.SuspendLayout();
 			this.Container2.Panel2.SuspendLayout();
@@ -124,6 +148,10 @@
 			this.MainContainer.Name = "MainContainer";
 			this.MainContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
 			// 
+			// MainContainer.Panel1
+			// 
+			this.MainContainer.Panel1.Controls.Add(this.Container1);
+			// 
 			// MainContainer.Panel2
 			// 
 			this.MainContainer.Panel2.Controls.Add(this.Container2);
@@ -132,9 +160,140 @@
 			this.MainContainer.TabIndex = 0;
 			this.MainContainer.TabStop = false;
 			// 
+			// Container1
+			// 
+			this.Container1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container1.IsSplitterFixed = true;
+			this.Container1.Location = new System.Drawing.Point(0, 0);
+			this.Container1.Name = "Container1";
+			this.Container1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			// 
+			// Container1.Panel1
+			// 
+			this.Container1.Panel1.Controls.Add(this.Container1_0);
+			this.Container1.Size = new System.Drawing.Size(402, 232);
+			this.Container1.SplitterDistance = 180;
+			this.Container1.TabIndex = 0;
+			// 
+			// Container1_0
+			// 
+			this.Container1_0.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container1_0.IsSplitterFixed = true;
+			this.Container1_0.Location = new System.Drawing.Point(0, 0);
+			this.Container1_0.Name = "Container1_0";
+			this.Container1_0.Orientation = System.Windows.Forms.Orientation.Horizontal;
+			// 
+			// Container1_0.Panel1
+			// 
+			this.Container1_0.Panel1.Controls.Add(this.Container1_1);
+			// 
+			// Container1_0.Panel2
+			// 
+			this.Container1_0.Panel2.Controls.Add(this.Container1_2);
+			this.Container1_0.Size = new System.Drawing.Size(402, 180);
+			this.Container1_0.SplitterDistance = 88;
+			this.Container1_0.TabIndex = 0;
+			// 
+			// Container1_1
+			// 
+			this.Container1_1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container1_1.IsSplitterFixed = true;
+			this.Container1_1.Location = new System.Drawing.Point(0, 0);
+			this.Container1_1.Name = "Container1_1";
+			// 
+			// Container1_1.Panel1
+			// 
+			this.Container1_1.Panel1.Controls.Add(this.CurrencyTextBox1);
+			this.Container1_1.Panel1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 17);
+			// 
+			// Container1_1.Panel2
+			// 
+			this.Container1_1.Panel2.Controls.Add(this.CurrencyComboBox1);
+			this.Container1_1.Panel2.Padding = new System.Windows.Forms.Padding(15);
+			this.Container1_1.Size = new System.Drawing.Size(402, 88);
+			this.Container1_1.SplitterDistance = 249;
+			this.Container1_1.TabIndex = 0;
+			// 
+			// CurrencyTextBox1
+			// 
+			this.CurrencyTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.CurrencyTextBox1.Cursor = System.Windows.Forms.Cursors.Default;
+			this.CurrencyTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.CurrencyTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.CurrencyTextBox1.HideSelection = false;
+			this.CurrencyTextBox1.Location = new System.Drawing.Point(15, 15);
+			this.CurrencyTextBox1.Multiline = true;
+			this.CurrencyTextBox1.Name = "CurrencyTextBox1";
+			this.CurrencyTextBox1.ReadOnly = true;
+			this.CurrencyTextBox1.Size = new System.Drawing.Size(219, 56);
+			this.CurrencyTextBox1.TabIndex = 0;
+			this.CurrencyTextBox1.TabStop = false;
+			this.CurrencyTextBox1.WordWrap = false;
+			this.CurrencyTextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CurrencyTextBoxMouseClick);
+			// 
+			// CurrencyComboBox1
+			// 
+			this.CurrencyComboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.CurrencyComboBox1.DropDownWidth = 104;
+			this.CurrencyComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.CurrencyComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F);
+			this.CurrencyComboBox1.FormattingEnabled = true;
+			this.CurrencyComboBox1.Location = new System.Drawing.Point(15, 15);
+			this.CurrencyComboBox1.Name = "CurrencyComboBox1";
+			this.CurrencyComboBox1.Size = new System.Drawing.Size(119, 56);
+			this.CurrencyComboBox1.TabIndex = 0;
+			// 
+			// Container1_2
+			// 
+			this.Container1_2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container1_2.IsSplitterFixed = true;
+			this.Container1_2.Location = new System.Drawing.Point(0, 0);
+			this.Container1_2.Name = "Container1_2";
+			// 
+			// Container1_2.Panel1
+			// 
+			this.Container1_2.Panel1.Controls.Add(this.CurrencyTextBox2);
+			this.Container1_2.Panel1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 17);
+			// 
+			// Container1_2.Panel2
+			// 
+			this.Container1_2.Panel2.Controls.Add(this.CurrencyComboBox2);
+			this.Container1_2.Panel2.Padding = new System.Windows.Forms.Padding(15);
+			this.Container1_2.Size = new System.Drawing.Size(402, 88);
+			this.Container1_2.SplitterDistance = 249;
+			this.Container1_2.TabIndex = 0;
+			// 
+			// CurrencyTextBox2
+			// 
+			this.CurrencyTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.CurrencyTextBox2.Cursor = System.Windows.Forms.Cursors.Default;
+			this.CurrencyTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.CurrencyTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.CurrencyTextBox2.Location = new System.Drawing.Point(15, 15);
+			this.CurrencyTextBox2.Multiline = true;
+			this.CurrencyTextBox2.Name = "CurrencyTextBox2";
+			this.CurrencyTextBox2.ReadOnly = true;
+			this.CurrencyTextBox2.Size = new System.Drawing.Size(219, 56);
+			this.CurrencyTextBox2.TabIndex = 1;
+			this.CurrencyTextBox2.TabStop = false;
+			this.CurrencyTextBox2.WordWrap = false;
+			this.CurrencyTextBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CurrencyTextBoxMouseClick);
+			// 
+			// CurrencyComboBox2
+			// 
+			this.CurrencyComboBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.CurrencyComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.CurrencyComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F);
+			this.CurrencyComboBox2.FormattingEnabled = true;
+			this.CurrencyComboBox2.Location = new System.Drawing.Point(15, 15);
+			this.CurrencyComboBox2.Name = "CurrencyComboBox2";
+			this.CurrencyComboBox2.Size = new System.Drawing.Size(119, 56);
+			this.CurrencyComboBox2.TabIndex = 1;
+			// 
 			// Container2
 			// 
 			this.Container2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2.IsSplitterFixed = true;
 			this.Container2.Location = new System.Drawing.Point(0, 0);
 			this.Container2.Name = "Container2";
 			this.Container2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -154,6 +313,7 @@
 			// Container2_0_1
 			// 
 			this.Container2_0_1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_0_1.IsSplitterFixed = true;
 			this.Container2_0_1.Location = new System.Drawing.Point(0, 0);
 			this.Container2_0_1.Name = "Container2_0_1";
 			this.Container2_0_1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -173,6 +333,7 @@
 			// Container2_1
 			// 
 			this.Container2_1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_1.IsSplitterFixed = true;
 			this.Container2_1.Location = new System.Drawing.Point(0, 0);
 			this.Container2_1.Name = "Container2_1";
 			// 
@@ -199,10 +360,12 @@
 			this.Button_Clear.Tag = "control";
 			this.Button_Clear.Text = "C";
 			this.Button_Clear.UseVisualStyleBackColor = true;
+			this.Button_Clear.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_1_1
 			// 
 			this.Container2_1_1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_1_1.IsSplitterFixed = true;
 			this.Container2_1_1.Location = new System.Drawing.Point(0, 0);
 			this.Container2_1_1.Name = "Container2_1_1";
 			// 
@@ -241,10 +404,12 @@
 			this.Button_Backspace.Tag = "control";
 			this.Button_Backspace.Text = "<-";
 			this.Button_Backspace.UseVisualStyleBackColor = true;
+			this.Button_Backspace.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_2
 			// 
 			this.Container2_2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_2.IsSplitterFixed = true;
 			this.Container2_2.Location = new System.Drawing.Point(0, 0);
 			this.Container2_2.Name = "Container2_2";
 			// 
@@ -270,10 +435,12 @@
 			this.Button_7.Tag = "digit";
 			this.Button_7.Text = "7";
 			this.Button_7.UseVisualStyleBackColor = true;
+			this.Button_7.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_2_1
 			// 
 			this.Container2_2_1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_2_1.IsSplitterFixed = true;
 			this.Container2_2_1.Location = new System.Drawing.Point(0, 0);
 			this.Container2_2_1.Name = "Container2_2_1";
 			// 
@@ -299,6 +466,7 @@
 			this.Button_8.Tag = "digit";
 			this.Button_8.Text = "8";
 			this.Button_8.UseVisualStyleBackColor = true;
+			this.Button_8.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_9
 			// 
@@ -310,10 +478,12 @@
 			this.Button_9.Tag = "digit";
 			this.Button_9.Text = "9";
 			this.Button_9.UseVisualStyleBackColor = true;
+			this.Button_9.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_0_2
 			// 
 			this.Container2_0_2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_0_2.IsSplitterFixed = true;
 			this.Container2_0_2.Location = new System.Drawing.Point(0, 0);
 			this.Container2_0_2.Name = "Container2_0_2";
 			this.Container2_0_2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -333,6 +503,7 @@
 			// Container2_0_3
 			// 
 			this.Container2_0_3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_0_3.IsSplitterFixed = true;
 			this.Container2_0_3.Location = new System.Drawing.Point(0, 0);
 			this.Container2_0_3.Name = "Container2_0_3";
 			this.Container2_0_3.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -352,6 +523,7 @@
 			// Container2_3
 			// 
 			this.Container2_3.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_3.IsSplitterFixed = true;
 			this.Container2_3.Location = new System.Drawing.Point(0, 0);
 			this.Container2_3.Name = "Container2_3";
 			// 
@@ -377,10 +549,12 @@
 			this.Button_4.Tag = "digit";
 			this.Button_4.Text = "4";
 			this.Button_4.UseVisualStyleBackColor = true;
+			this.Button_4.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_3_1
 			// 
 			this.Container2_3_1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_3_1.IsSplitterFixed = true;
 			this.Container2_3_1.Location = new System.Drawing.Point(0, 0);
 			this.Container2_3_1.Name = "Container2_3_1";
 			// 
@@ -406,6 +580,7 @@
 			this.Button_5.Tag = "digit";
 			this.Button_5.Text = "5";
 			this.Button_5.UseVisualStyleBackColor = true;
+			this.Button_5.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_6
 			// 
@@ -417,10 +592,12 @@
 			this.Button_6.Tag = "digit";
 			this.Button_6.Text = "6";
 			this.Button_6.UseVisualStyleBackColor = true;
+			this.Button_6.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_4
 			// 
 			this.Container2_4.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_4.IsSplitterFixed = true;
 			this.Container2_4.Location = new System.Drawing.Point(0, 0);
 			this.Container2_4.Name = "Container2_4";
 			// 
@@ -446,10 +623,12 @@
 			this.Button_1.Tag = "digit";
 			this.Button_1.Text = "1";
 			this.Button_1.UseVisualStyleBackColor = true;
+			this.Button_1.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_4_1
 			// 
 			this.Container2_4_1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_4_1.IsSplitterFixed = true;
 			this.Container2_4_1.Location = new System.Drawing.Point(0, 0);
 			this.Container2_4_1.Name = "Container2_4_1";
 			// 
@@ -475,6 +654,7 @@
 			this.Button_2.Tag = "digit";
 			this.Button_2.Text = "2";
 			this.Button_2.UseVisualStyleBackColor = true;
+			this.Button_2.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_3
 			// 
@@ -486,10 +666,12 @@
 			this.Button_3.Tag = "digit";
 			this.Button_3.Text = "3";
 			this.Button_3.UseVisualStyleBackColor = true;
+			this.Button_3.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Container2_5
 			// 
 			this.Container2_5.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_5.IsSplitterFixed = true;
 			this.Container2_5.Location = new System.Drawing.Point(0, 0);
 			this.Container2_5.Name = "Container2_5";
 			// 
@@ -504,6 +686,7 @@
 			// Container2_5_1
 			// 
 			this.Container2_5_1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Container2_5_1.IsSplitterFixed = true;
 			this.Container2_5_1.Location = new System.Drawing.Point(0, 0);
 			this.Container2_5_1.Name = "Container2_5_1";
 			// 
@@ -529,6 +712,7 @@
 			this.Button_0.Tag = "digit";
 			this.Button_0.Text = "0";
 			this.Button_0.UseVisualStyleBackColor = true;
+			this.Button_0.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Button_Comma
 			// 
@@ -540,6 +724,7 @@
 			this.Button_Comma.Tag = "digit";
 			this.Button_Comma.Text = ",";
 			this.Button_Comma.UseVisualStyleBackColor = true;
+			this.Button_Comma.Click += new System.EventHandler(this.OnButtonClick);
 			// 
 			// Converter
 			// 
@@ -547,9 +732,28 @@
 			this.Controls.Add(this.MainContainer);
 			this.Name = "Converter";
 			this.Size = new System.Drawing.Size(402, 536);
+			this.Load += new System.EventHandler(this.Converter_Load);
+			this.MainContainer.Panel1.ResumeLayout(false);
 			this.MainContainer.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.MainContainer)).EndInit();
 			this.MainContainer.ResumeLayout(false);
+			this.Container1.Panel1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.Container1)).EndInit();
+			this.Container1.ResumeLayout(false);
+			this.Container1_0.Panel1.ResumeLayout(false);
+			this.Container1_0.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.Container1_0)).EndInit();
+			this.Container1_0.ResumeLayout(false);
+			this.Container1_1.Panel1.ResumeLayout(false);
+			this.Container1_1.Panel1.PerformLayout();
+			this.Container1_1.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.Container1_1)).EndInit();
+			this.Container1_1.ResumeLayout(false);
+			this.Container1_2.Panel1.ResumeLayout(false);
+			this.Container1_2.Panel1.PerformLayout();
+			this.Container1_2.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.Container1_2)).EndInit();
+			this.Container1_2.ResumeLayout(false);
 			this.Container2.Panel1.ResumeLayout(false);
 			this.Container2.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.Container2)).EndInit();
@@ -640,5 +844,13 @@
 		private System.Windows.Forms.SplitContainer Container2_3_1;
 		private System.Windows.Forms.Button Button_5;
 		private System.Windows.Forms.Button Button_6;
+		private System.Windows.Forms.SplitContainer Container1;
+		private System.Windows.Forms.SplitContainer Container1_0;
+		private System.Windows.Forms.SplitContainer Container1_1;
+		private System.Windows.Forms.SplitContainer Container1_2;
+		private System.Windows.Forms.TextBox CurrencyTextBox1;
+		private System.Windows.Forms.TextBox CurrencyTextBox2;
+		private System.Windows.Forms.ComboBox CurrencyComboBox1;
+		private System.Windows.Forms.ComboBox CurrencyComboBox2;
 	}
 }
