@@ -240,7 +240,7 @@
 			this.CurrencyComboBox1.FormattingEnabled = true;
 			this.CurrencyComboBox1.Location = new System.Drawing.Point(15, 15);
 			this.CurrencyComboBox1.Name = "CurrencyComboBox1";
-			this.CurrencyComboBox1.Size = new System.Drawing.Size(119, 56);
+			this.CurrencyComboBox1.Size = new System.Drawing.Size(119, 40);
 			this.CurrencyComboBox1.TabIndex = 0;
 			// 
 			// Container1_2
@@ -287,7 +287,7 @@
 			this.CurrencyComboBox2.FormattingEnabled = true;
 			this.CurrencyComboBox2.Location = new System.Drawing.Point(15, 15);
 			this.CurrencyComboBox2.Name = "CurrencyComboBox2";
-			this.CurrencyComboBox2.Size = new System.Drawing.Size(119, 56);
+			this.CurrencyComboBox2.Size = new System.Drawing.Size(119, 40);
 			this.CurrencyComboBox2.TabIndex = 1;
 			// 
 			// Container2

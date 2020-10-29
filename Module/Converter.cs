@@ -56,8 +56,18 @@ namespace TRTPO_CALC.Module
 		void OnTextChanged()
 		{
 			unselectedBox.Clear();
-			if(selectedBox.Text != string.Empty)
-				unselectedBox.AppendText($"{Math.Round(double.Parse(selectedBox.Text) * CurrencyParser.getExchangeRate(CurrencyComboBox1.Text, CurrencyComboBox2.Text), 4)}");
+			if (selectedBox.Text != string.Empty)
+			{
+				try
+				{
+					double exchangeRate = CurrencyParser.getExchangeRate(CurrencyComboBox1.Text, CurrencyComboBox2.Text);
+					unselectedBox.AppendText($"{Math.Round(double.Parse(selectedBox.Text) * exchangeRate, 4)}");
+				}
+				catch (Exception e)
+				{
+					MessageBox.Show(e.Message);
+				}
+			}
 		}
 
 		private void OnCalcClick(object sender, EventArgs e)
