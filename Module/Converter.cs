@@ -60,7 +60,9 @@ namespace TRTPO_CALC.Module
 			{
 				try
 				{
-					double exchangeRate = CurrencyParser.getExchangeRate(CurrencyComboBox1.Text, CurrencyComboBox2.Text);
+					string currency1 = selectedBox == CurrencyTextBox1 ? CurrencyComboBox1.Text : CurrencyComboBox2.Text;
+					string currency2 = selectedBox == CurrencyTextBox1 ? CurrencyComboBox2.Text : CurrencyComboBox1.Text;
+					double exchangeRate = CurrencyParser.getExchangeRate(currency1, currency2);
 					unselectedBox.AppendText($"{Math.Round(double.Parse(selectedBox.Text) * exchangeRate, 4)}");
 				}
 				catch (Exception e)
@@ -99,6 +101,11 @@ namespace TRTPO_CALC.Module
 		private void Converter_Load(object sender, EventArgs e)
 		{
 			Parent.KeyPress += OnKeyPressed;
+		}
+
+		private void SelectedIndexChanged(object sender, EventArgs e)
+		{
+			OnTextChanged();
 		}
 	}
 

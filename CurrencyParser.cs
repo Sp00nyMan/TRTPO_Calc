@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Net;
 using System.Net.Http;
 using Newtonsoft.Json;
@@ -17,14 +18,22 @@ namespace TRTPO_CALC
 		private const string URL = "https://api.exchangeratesapi.io/";
 
 		public enum Currency
-		{
+		{ 
+			[Description("United States dollar")]
 			USD,
+			[Description("Euro")]
 			EUR,
+			[Description("Russian ruble")]
 			RUB,
+			[Description("Czech koruna")]
 			CZK,
+			[Description("Polish zloty")]
 			PLN,
+			[Description("Indian rupee")]
 			INR,
+			[Description("Mexican peso")]
 			MXN,
+			[Description("Canadian dollar")]
 			CAD
 		}
 
