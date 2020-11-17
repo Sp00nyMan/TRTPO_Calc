@@ -144,6 +144,7 @@
 			// MainContainer
 			// 
 			this.MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.MainContainer.IsSplitterFixed = true;
 			this.MainContainer.Location = new System.Drawing.Point(0, 0);
 			this.MainContainer.Name = "MainContainer";
 			this.MainContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -240,7 +241,7 @@
 			this.CurrencyComboBox1.FormattingEnabled = true;
 			this.CurrencyComboBox1.Location = new System.Drawing.Point(15, 15);
 			this.CurrencyComboBox1.Name = "CurrencyComboBox1";
-			this.CurrencyComboBox1.Size = new System.Drawing.Size(119, 56);
+			this.CurrencyComboBox1.Size = new System.Drawing.Size(119, 40);
 			this.CurrencyComboBox1.TabIndex = 0;
 			this.CurrencyComboBox1.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
 			// 
@@ -288,7 +289,7 @@
 			this.CurrencyComboBox2.FormattingEnabled = true;
 			this.CurrencyComboBox2.Location = new System.Drawing.Point(15, 15);
 			this.CurrencyComboBox2.Name = "CurrencyComboBox2";
-			this.CurrencyComboBox2.Size = new System.Drawing.Size(119, 56);
+			this.CurrencyComboBox2.Size = new System.Drawing.Size(119, 40);
 			this.CurrencyComboBox2.TabIndex = 1;
 			this.CurrencyComboBox2.SelectedIndexChanged += new System.EventHandler(this.SelectedIndexChanged);
 			// 
