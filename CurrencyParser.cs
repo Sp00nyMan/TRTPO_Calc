@@ -47,7 +47,7 @@ namespace TRTPO_CALC
 			if (fromCurrencyCode == toCurrencyCode)
 				return 1;
 
-			using var client = new HttpClient(new HttpClientHandler {AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate});
+			var client = new HttpClient(new HttpClientHandler {AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate});
 			client.BaseAddress = new Uri(URL);
 			
 			HttpResponseMessage response = client.GetAsync(getRequestString(fromCurrencyCode, toCurrencyCode)).Result;
